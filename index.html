@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>SHOPLE</title>
+    <link rel = "stylesheet" href = "./css/header.css">
+    <link rel = "stylesheet" href = "./css/indexmain.css">
+    <link rel = "stylesheet" href = "./css/footer.css">
+    <link rel = "stylesheet" href = "./css/productList.css">
+    <link rel = "stylesheet" href = "./css/sideCF.css">
+    <link rel = "stylesheet" href = "./css/productEx.css">
+
+    <script src = "./js/funiture.js"></script>
+    <script src = "./js/food.js"></script>
+    <script src = "./js/digital.js"></script>
+    <script src = "./js/fashion.js"></script>
+    <script src = "./js/life.js"></script>
+
+    <script src = "./js/advertise.js"></script>
+
+    <script src = "./js/header.js"></script>
+    <script src = "./js/footer.js"></script>
+</head>
+<body onload = "tokenLoad(), headLoadForIndex(), footLoadForIndex(), advertise(), cfInit()"
+onresize = "sideCFShow()" onscroll="scrollCF()">
+    <form>
+        <header id = "headRegion"></header>
+        <nav></nav>
+        <div id = "sideCF">
+            <div class = "advertisement">
+                <a href = "#"><img src = "./img/advertise/cf1.jpg"></a>
+            </div>
+            <div class = "advertisement">
+                <a href = "#"><img src = "./img/advertise/cf2.png"></a>
+            </div>
+            <div class = "advertisement">
+                <a href = "#"><img src = "./img/advertise/cf3.png"></a>
+            </div>
+        </div>
+        <div id = "wrapper">
+            <main>
+                <article>
+                    <p class = "title">메인 광고</p>
+                    <div id = "advertise"><img src = ""></div>
+                </article>
+                <section>
+                    <p class = "title">관심 상품</p>
+                    <ul class = "pdList">
+                        <li class = "product" onclick = "mealKitItem(0, true)">
+                            <div>
+                                <img src = "./img/food/mealkit/busan.png">
+                                <p class = "title">홈스토랑 부산식 물떡 꼬치 어묵탕 냉동<br>
+                                <small class = "price">14,390원</small></p>
+                            </div>
+                        </li>
+                        <li class = "product" onclick = "deskItem(4, true)">
+                            <div>
+                                <img src = "./img/funiture/desk/desk5_lunalab.jpg">
+                                <p class = "title">루나랩 높이조절 스탠딩 책상<br>
+                                <small class = "price">145,000원</small></p>
+                            </div>
+                        </li>
+                        <li class = "product" onclick = "faceItem(0, true)">
+                            <div>
+                                <img src = "./img/life/face/face1_doctorG.png">
+                                <p class = "title">닥터지 약산성 레드 블레미쉬 클리어 수딩 폼<br>
+                                <small class = "price">19,360원</small></p>
+                            </div>
+                        </li>
+                        <li class = "product" onclick = "mealKitItem(3, true)">
+                            <div>
+                                <img src = "./img/food/mealkit/jjukkumebokk.jpg">
+                                <p class = "title">불타는 쭈꾸미 볶음 400g<br>
+                                <small class = "price">14,900원</small></p>
+                            </div>
+                        </li>
+                        <li class = "product" onclick = "freshItem(3, true)">
+                            <div>
+                                <img src = "./img/food/fresh/fruit/sb1.png">
+                                <p class = "title">하동 프리미엄 설향 딸기 500g 4팩 총2kg 딸기선물세트<br>
+                                <small class = "price">45,900원</small></p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <p class = "title">트렌드</p>
+                    <ul class = "pdList">
+                        <li class = "product" onclick = "shoeItem(2, true)">
+                            <div>
+                                <img src = "./img/fashion/shoe/balenciaga/balen1.jpg">
+                                <p class = "title">남성 SPEED RECYCLED 니트 트레이너 블랙<br>
+                                <small class = "price">1,150,000원</small></p>
+                            </div>
+                        </li>                       
+                        <li class = "product" onclick = "topItem(0, true)">
+                            <div>
+                                <img src = "./img/fashion/top/ami/ami1.jpg">
+                                <p class = "title">Red Ami De Coeur Shirt - Grey<br>
+                                <small class = "price">575,000원</small></p>
+                            </div>
+                        </li>
+                        <li class = "product" onclick = "bottomItem(1, true)">
+                            <div>
+                                <img src = "./img/fashion/bottom/ck/ck2.jpg">
+                                <p class = "title">남성 90's 루즈핏 라이트블루 데님<br>
+                                <small class = "price">249,000원</small></p>
+                            </div>
+                        </li>
+                        <li class = "product" onclick = "bagItem(4, true)">
+                            <div>
+                                <img src = "./img/fashion/bag/northface/nf1.jpg">
+                                <p class = "title">BOREALIS II<br>
+                                <small class = "price">149,000원</small></p>
+                            </div>
+                        </li>
+                        <li class = "product" onclick = "capItem(0, true)">
+                            <div>
+                                <img src = "./img/fashion/cap/bbr/bbr2.jpg">
+                                <p class = "title">버버리 STRIPE 캡모자<br>
+                                <small class = "price">380,000원</small></p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <p class = "title">추천 상품</p>
+                    <ul class = "pdList">
+                        <li class = "product" onclick = "chairItem(3, true)">
+                            <div>
+                                <img src = "./img/funiture/chair/chair4_xenics.jpg">
+                                <p class = "title">제닉스 ARENA ZERO BLACK 게이밍 의자<br>
+                                <small class = "price">179,000원</small></p>
+                            </div>
+                        </li>
+                        <li class = "product" onclick = "bagItem(7, true)">
+                            <div>
+                                <img src = "./img/fashion/bag/samsonite/ss2.jpg">
+                                <p class = "title">BALVENIE 발베니<br>
+                                <small class = "price">399,000원</small></p>
+                            </div>
+                        </li>
+                        <li class = "product" onclick = "bottomItem(3, true)">
+                            <div>
+                                <img src = "./img/fashion/bottom/dynafit/dyb2.jpg">
+                                <p class = "title">오라클 남성 하프 팬츠<br>
+                                <small class = "price">99,000원</small></p>
+                            </div>
+                        </li>
+                        <li class = "product" onclick = "noodleItem(3, true)">                            
+                            <div>
+                                <img src = "./img/food/noodle/ramyun/nuguri.png">
+                                <p class = "title">농심 신라면 20개 + 얼큰너구리 20개<br>
+                                <small class = "price">45,960원</small></p>
+                            </div>
+                        </li>
+                        <li class = "product" onclick = "seafoodItem(7, true)">
+                            <div>
+                                <img src = "./img/food/seafood/sashimi/salmon.jpg">
+                                <p class = "title">은하수산 숙성한 연어회 120g<br>
+                                <small class = "price">13,900원</small></p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </main>
+        </form>
+    </div>
+    <footer id = "footRegion"></footer>
+</body>
+</html>
